@@ -2,6 +2,7 @@ import express from "express";//ECMA6
 import dotenv from "dotenv";// DEPENDENCIA PARA MANEJAR VARIABLES DE ENTORNO
 import { connectionMongo } from "./src/config/dataBase.js";
 import { userRouter } from "./src/routes/user.routes.js";
+import { loginRouter } from "./src/routes/inicioSesion.routes.js";
 
 
 // EL SEGUNDO PASO ES: 2. CONFIGURAR EL USO DE NUESTRO SERVIDOR:
@@ -16,6 +17,7 @@ connectionMongo();
 app.use(express.json());
 
 app.use('/usuarios', userRouter); 
+app.use('/inicioSesion', loginRouter);
 
 
 

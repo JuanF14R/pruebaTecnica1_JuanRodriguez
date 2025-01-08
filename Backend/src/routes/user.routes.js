@@ -1,4 +1,5 @@
 import { crearUsuario, obtenerUsuarios, actualizarUsuarioPorId, eliminarUsuariosPorId } from "../controllers/user.controllers.js";
+import { auth } from "../middleware/auth.js";
 
 
 import express from "express";
@@ -12,5 +13,4 @@ userRouter.get('/obtener', obtenerUsuarios);
 userRouter.put('/actualizar/:id', actualizarUsuarioPorId);
 userRouter.delete('/eliminar/:id', eliminarUsuariosPorId);
 
-//Configuramos el router
 
