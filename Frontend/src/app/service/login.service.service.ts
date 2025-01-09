@@ -16,7 +16,7 @@ export class LoginServiceService {
   public _toastrService = inject(ToastrService);
 
   //Creación de ruta de conexión al Back
-  private URL_LOGIN = 'http://localhost:3000/iniciarSesion/';
+  private URL_LOGIN = 'http://localhost:3000/inicioSesion/';
 
   inicioSesionUsuario(credencialesUsuario:Credenciales){
 
@@ -41,7 +41,7 @@ export class LoginServiceService {
 
     localStorage.removeItem('token');
 
-    this._router.navigate(['/inicioSesion']);
+    this._router.navigate(['/login']);
 
   }
 

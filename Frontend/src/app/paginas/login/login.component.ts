@@ -30,22 +30,23 @@ export class LoginComponent {
     //Lo que queremos en este caso es que me muestre en consola la información que se esta reciviendo del formulario
 
 
-    const emailLoginUser = this.formularioLogin.value.email;
-    const passwordLoginUser = this.formularioLogin.value.password;
+    const emailLogin = this.formularioLogin.value.email;
+    const passwordLogin = this.formularioLogin.value.password;
 
 
    let CredencialesIngreso: Credenciales | null = null;
 
 
-   if(typeof emailLoginUser === 'string' && typeof passwordLoginUser === 'string'){
+   if(typeof emailLogin === 'string' && typeof passwordLogin === 'string'){
 
     CredencialesIngreso = {
       
-      emailLoginUser,
-      passwordLoginUser
+      emailLogin,
+      passwordLogin,
+      
       
     }
-
+    console.log(CredencialesIngreso);
    }
 
    // GESTION PARA LA PETICIÓN POST PARA REALIZAR PETICIÓN AL BACK
