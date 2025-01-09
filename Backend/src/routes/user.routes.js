@@ -1,4 +1,4 @@
-import { crearUsuario, obtenerUsuarios, actualizarUsuarioPorId, eliminarUsuariosPorId } from "../controllers/user.controllers.js";
+import { crearUsuario } from "../controllers/user.controllers.js";
 import { auth } from "../middleware/auth.js";
 
 
@@ -9,8 +9,8 @@ import express from "express";
 export const userRouter = express.Router();
 
 userRouter.post('/crear', crearUsuario);
-userRouter.get('/obtener', obtenerUsuarios);
-userRouter.put('/actualizar/:id', actualizarUsuarioPorId);
-userRouter.delete('/eliminar/:id', eliminarUsuariosPorId);
+// userRouter.get('/obtener', obtenerUsuarios);
+// userRouter.put('/actualizar/:id', actualizarUsuarioPorId);
+// userRouter.delete('/eliminar/:id', eliminarUsuariosPorId);
 
 
