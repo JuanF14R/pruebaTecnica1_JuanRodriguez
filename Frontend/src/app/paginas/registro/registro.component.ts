@@ -30,7 +30,7 @@ export class RegistroComponent {
   handleSubmint() {
     //Lo que queremos en este caso es que me muestre en consola la información que se esta reciviendo del formulario
 
-    
+    console.log("Entre al metodo");
 
     const firstName = this.formularioRegistro.value.firstName;
     const lastName = this.formularioRegistro.value.lastName;
@@ -41,9 +41,13 @@ export class RegistroComponent {
 
 
     let CredencialesRegistro: Usuarios | null = null;
+    
+    // console.log(firstName);
+    // console.log(lastName);
+    // console.log(email);
+    // console.log(password);
 
-
-    if (typeof firstName === 'string' && lastName === 'string' && typeof email === 'string' &&  typeof password === 'string') {
+    if (typeof firstName === 'string' && typeof lastName === 'string' && typeof email === 'string' &&  typeof password === 'string') {
 
       CredencialesRegistro = {
 
@@ -53,6 +57,8 @@ export class RegistroComponent {
         password
 
       }
+
+      // console.log(CredencialesRegistro);
   
     }
     
@@ -65,7 +71,7 @@ export class RegistroComponent {
 
           this._toastrService.success(res.mensaje);
 
-          this._Router.navigate(['/login']);
+          this._Router.navigate(['/inicioSesion']);
         },
 
         error: (err) => {

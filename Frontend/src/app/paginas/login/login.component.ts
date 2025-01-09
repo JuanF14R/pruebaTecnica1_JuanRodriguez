@@ -46,7 +46,7 @@ export class LoginComponent {
       
       
     }
-    console.log(CredencialesIngreso);
+    // console.log(CredencialesIngreso);
    }
 
    // GESTION PARA LA PETICIÓN POST PARA REALIZAR PETICIÓN AL BACK

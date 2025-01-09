@@ -1,6 +1,7 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Usuarios } from '../interface/usuarios';
+import { Route } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -16,5 +17,6 @@ export class UsuariosServiceService {
   postUsuarios(user: Usuarios){
     return this._httpClient.post(this.URL_USUARIOS + "/crear", user);
   }
+  
   
 }
